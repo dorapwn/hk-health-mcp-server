@@ -4,7 +4,7 @@ This server provides tools for accessing health-related data in Hong Kong.
 """
 
 from fastmcp import FastMCP
-from .tools import aed_waiting, specialist_waiting_time_by_cluster, pas_gopc_avg_quota
+from .tools import aed_waiting, specialist_waiting_time_by_cluster, pas_gopc_avg_quota, healthcare_snapshot
 
 
 def server():
@@ -20,5 +20,6 @@ def server():
     aed_waiting.register(mcp)
     specialist_waiting_time_by_cluster.register(mcp)
     pas_gopc_avg_quota.register(mcp)
+    healthcare_snapshot.register(mcp)
 
     return mcp
