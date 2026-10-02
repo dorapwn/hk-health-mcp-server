@@ -57,7 +57,7 @@ class TestAEDWaitingTimes(unittest.TestCase):
             mock_datetime.isoformat.return_value = "2025-07-14T10:00:00"
             result = _get_aed_waiting_times(lang="en")
             mock_fetch_json_data.assert_called_once_with(
-                "https://www.ha.org.hk/opendata/aed/aedwtdata-en.json"
+                "https://www.ha.org.hk/opendata/aed/aedwtdata2-en.json"
             )
             self.assertIn("data", result)
             self.assertIn("last_updated", result)

@@ -42,7 +42,7 @@ def _get_aed_waiting_times(lang: Optional[str] = "en") -> Dict:
     Args:
         lang: Language code (en/tc/sc) for data format
     """
-    url = f"https://www.ha.org.hk/opendata/aed/aedwtdata-{lang}.json"
+    url = f"https://www.ha.org.hk/opendata/aed/aedwtdata2-{lang}.json"
     data = fetch_json_data(url)
     return {"data": data, "last_updated": datetime.now().isoformat()}
     
